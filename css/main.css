@@ -1496,8 +1496,8 @@ header .logo a {
  */
 #about {
 	background: #FFFFFF;
-	padding-top: 12rem;
-	padding-bottom: 15rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 #about .section-intro {
 	margin-bottom: 3rem;
@@ -1563,6 +1563,12 @@ header .logo a {
 
 .button-section {
 	text-align: center;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 .button-section .button {
 	width: 250px;
