@@ -1,1 +1,1 @@
-This repository aims to upload my cv onto github-pages
+This repository aims to create a personal website
