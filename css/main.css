@@ -93,7 +93,9 @@ a:hover, a:focus, a:active {
 	color: #EB5B00;
 	outline: 0;
 }
-
+#email:hover {
+	color: #EB5B00 !important; /* or orange if you want */
+  }
 /**
  * ===================================================================
  * 03. typography & general theme styles - (_document-setup.scss)
