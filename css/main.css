@@ -1044,7 +1044,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 .section-intro h5 {
 	color: #EB5B00;
-	font-size: 1.6rem;
+	font-size: 2.3rem;
 	line-height: 1.875;
 	margin-bottom: 0.3rem;
 	letter-spacing: .4rem;
@@ -1231,7 +1231,8 @@ header .logo a {
 
 /* dropdown nav */
 .main-navigation {
-	background: transparent;
+	background: #0E0E0E;
+	opacity: 0.95;
 	padding: 24px 30px 42px;
 	margin: 0;
 	width: 100%;
@@ -1419,8 +1420,8 @@ header .logo a {
 }
 
 .intro-social li a:hover .fa-linkedin { color: #0a66c2; }
-.intro-social li a:hover .fa-github { color:#6cc644 }
-.intro-social li a:hover .fa-instagram { color: #e1306c; }
+.intro-social li a:hover .fa-github { color:#EB5B00 }
+.intro-social li a:hover .fa-instagram { color: #E1306C; }
 .intro-social li a:hover .fa-coffee { color: brown; }
 .intro-social li a:hover .fa-youtube-play { color: red; }
 
@@ -1496,11 +1497,18 @@ header .logo a {
  */
 #about {
 	background: #FFFFFF;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	min-height: 100vh; /* fallback */
+	height: auto;
+	scroll-snap-align: start;
+	/* min-height: calc(var(--vh, 1vh) * 100); instead of height */
+	width: 100%;
 }
+#about-start {
+	padding-top: 5rem;
+}
+
 #about .section-intro {
-	margin-bottom: 3rem;
+	margin-bottom: 0rem;
 }
 
 .intro-info {
@@ -1526,7 +1534,8 @@ header .logo a {
 	position: relative;
 	text-align: left;
 	max-width: 850px;
-	margin-bottom: 3.6rem;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 }
 .about-content h3 {
 	font-family: "poppins-bold", sans-serif;
@@ -1563,12 +1572,12 @@ header .logo a {
 
 .button-section {
 	text-align: center;
-	display: flex;
+	/* display: flex; */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 2rem;
+	padding-bottom: 3rem;
 }
 .button-section .button {
 	width: 250px;
@@ -1634,6 +1643,9 @@ header .logo a {
  * -------------------------------------------------------------------
  */
 #resume {
+	height: 100vh;
+	width: 100%;
+	overflow-y: auto;
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 }
@@ -2494,3 +2506,19 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/**
+ * ===================================================================
+ * 19. scroll snap container
+ * -------------------------------------------------------------------
+ */
+ .scroll-wrapper {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+	scroll-behavior: smooth;
+  }
+  
+  .scroll-wrapper section {
+	scroll-snap-align: start;
+  }
