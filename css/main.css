@@ -156,9 +156,9 @@ p img {
 }
 p.lead {
 	font-family: "lora-regular", serif;
-	font-size: 2rem;
 	line-height: 1.8;
 	color: #888888;
+	text-align: justify;
 }
 @media only screen and (max-width:768px) {
 	p.lead {
@@ -1232,7 +1232,7 @@ header .logo a {
 /* dropdown nav */
 .main-navigation {
 	background: #0E0E0E;
-	opacity: 0.95;
+	opacity: 0.85;
 	padding: 24px 30px 42px;
 	margin: 0;
 	width: 100%;
@@ -1525,9 +1525,9 @@ header .logo a {
 	margin-right: 30px;
 }
 .intro-info .lead {
-	text-align: left;
 	padding-left: 15rem;
 	color: black;
+	font-size: 1.7rem;
 }
 
 .about-content {
