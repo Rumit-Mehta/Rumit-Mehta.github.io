@@ -1497,19 +1497,18 @@ header .logo a {
  */
 #about {
 	background: #FFFFFF;
-	padding-top: 3rem;
-	padding-bottom: 3rem;
-	height: 100vh; /* fallback */
-	min-height: calc(var(--vh, 1vh) * 100); /* instead of height */
+	min-height: 100vh; /* fallback */
+	height: auto;
+	scroll-snap-align: start;
+	/* min-height: calc(var(--vh, 1vh) * 100); instead of height */
 	width: 100%;
-	overflow-y: auto;
 }
 #about-start {
 	padding-top: 5rem;
 }
 
 #about .section-intro {
-	margin-bottom: 3rem;
+	margin-bottom: 0rem;
 }
 
 .intro-info {
@@ -1535,7 +1534,8 @@ header .logo a {
 	position: relative;
 	text-align: left;
 	max-width: 850px;
-	margin-bottom: 1rem;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 }
 .about-content h3 {
 	font-family: "poppins-bold", sans-serif;
@@ -1572,12 +1572,12 @@ header .logo a {
 
 .button-section {
 	text-align: center;
-	display: flex;
+	/* display: flex; */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 2rem;
+	padding-bottom: 3rem;
 }
 .button-section .button {
 	width: 250px;
@@ -2506,3 +2506,19 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/**
+ * ===================================================================
+ * 19. scroll snap container
+ * -------------------------------------------------------------------
+ */
+ .scroll-wrapper {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+	scroll-behavior: smooth;
+  }
+  
+  .scroll-wrapper section {
+	scroll-snap-align: start;
+  }
