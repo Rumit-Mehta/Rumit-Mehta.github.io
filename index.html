@@ -7,7 +7,7 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>"Rumit Mehta"</title>
+	<title>Rumit Mehta</title>
 	<!-- TODO: make the description better. More informative and natural language -->
 	<meta name="description" content="Rumit Mehta's Portfolio | Devops | Frontend | Backend"> 
 	<meta name="author" content="Rumit Mehta">
@@ -105,7 +105,7 @@
 		<div id= "about-start" class="row section-intro">
 			<div class="col-twelve">
 
-				<h5>So a quick intro</h5>
+				<h5>A quick introduction</h5>
 
 
 				<div class="intro-info">
@@ -211,7 +211,7 @@
 		<div class="row button-section">
 			<div class="">
 				<a href="#Work" title="continue" class="button stroke smoothscroll">Work History</a>
-				<a href="https://github.com/Rumit-Mehta/Rumit-Mehta.github.io/raw/master/config/files/rumit-cv.pdf" target="_blank" title="Download CV" class="button button-primary">Download CV</a>
+				<a href="https://raw.githubusercontent.com/Rumit-Mehta/Rumit-Mehta.github.io/main/config/files/rumit-cv.pdf" title="Download CV" class="button button-primary">Download CV</a>
 			</div>
 		</div>
 
@@ -615,13 +615,13 @@
 
    <!-- Java Script
    ================================================== -->
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
-   <script src="js/viewport-fix.js"></script>
+	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/viewport-fix.js"></script>
    <!-- Get the data from the json -->
 	<!-- TODO: Add this script to an external js file -->
-   <script>
+   	<script>
 	fetch('config/data.json')
 	  .then(res => res.json())
 	  .then(data => {
@@ -690,7 +690,7 @@
 	  .catch(err => {
 		console.error('Error loading profile:', err);
 	  });
-  </script>
+	</script>
 	<!-- scroll js -->
 	<script>
 		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -708,9 +708,35 @@
 			}
 		  });
 		});
+	</script>
+	<!-- current menu item js  -->
+	<script>
+		const scrollWrapper = document.querySelector('.scroll-wrapper');
+		const sections = document.querySelectorAll('section');
+		const navItems = document.querySelectorAll('.main-navigation li');
+	  
+		scrollWrapper.addEventListener('scroll', () => {
+		  let current = '';
+	  
+		  sections.forEach(section => {
+			const sectionTop = section.offsetTop;
+			const sectionHeight = section.offsetHeight;
+			const scrollTop = scrollWrapper.scrollTop;
+	  
+			if (scrollTop >= sectionTop - 150 && scrollTop < sectionTop + sectionHeight - 150) {
+			  current = section.getAttribute('id');
+			}
+		  });
+	  
+		  navItems.forEach(li => {
+			li.classList.remove('current');
+			const link = li.querySelector('a');
+			if (link && link.getAttribute('href') === `#${current}`) {
+			  li.classList.add('current');
+			}
+		  });
+		});
 	  </script>
-
-
 </body>
 
 </html>
