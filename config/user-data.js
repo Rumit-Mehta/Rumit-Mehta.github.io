@@ -1,0 +1,118 @@
+const data = {
+    name: "Rumit Mehta",
+    dob: "25/12/1997",
+    contact: {
+      phone: "+447740090474",
+      email: "rumitmehta@icloud.com",
+      linkedin: "https://www.linkedin.com/in/mehta-rumit/"
+    },
+    title: " Full-Stack Developer | DevOps Engineer ",
+    summary:
+      "A Software Engineer with 4+ years of experience within financial and healthcare industries and a keen interest in all things FinTech. Have a strong background in both DevOps and Development from my time at Barclays. Currently contracting to improve my skills by constantly taking on new projects; some of which include creating a website for IMS software which is being used by the NHS. Experienced in collaborating with teams worldwide and passionate about mentoring junior devs in gratitude to those who guided me to this point.",
+    technicalSkills: {
+      languages: ["Python", "Java", "JavaScript", "React", "MATLAB", "HTML", "CSS", "JSON", "YAML"],
+      ci_cd_tools: ["Jenkins", "Chef", "Docker", "GIT"],
+      databases: ["ElasticSearch", "MongoDB", "PostgreSQL", "MySQL"],
+      cloud_infrastructure: ["AWS (EC2, CloudFormation, Lambda, SQS)", "Terraform"]
+    },
+    experience: [
+      {
+        title: "Senior Software Developer",
+        company: "Pathhub Windemere",
+        location: "Remote",
+        date: "May 2024 – Current",
+        highlights: [
+          "Built a Pathology IMS website with Django & Python, featuring AI tools, annotation, and scalable slide viewers.",
+          "Deployed product using Docker and Azure, helping secure a £1M contract.",
+          "Mentored junior developers on code quality, debugging, and Git best practices."
+        ]
+      },
+      {
+        title: "Platform Engineer",
+        company: "Barclays",
+        location: "Northampton",
+        date: "September 2022 – April 2024",
+        highlights: [
+          "Optimized AWS and Elasticsearch clusters, reducing overprovisioning and saving costs.",
+          "Built cross-cluster search functionality using Terraform and AWS services.",
+          "Automated CI/CD workflows with Python and Jenkins to enhance build visibility."
+        ]
+      },
+      {
+        title: "Site Reliability Engineer",
+        company: "Barclays",
+        location: "Northampton",
+        date: "September 2021 – September 2022",
+        highlights: [
+          "Automated onboarding using Linux, Chef, Jenkins; managed Elasticsearch operations.",
+          "Wrote Python scripts to aggregate large datasets and integrate with Logstash.",
+          "Collaborated across dev and ops teams to improve reliability and testing."
+        ]
+      },
+      {
+        title: "Software Developer Intern",
+        company: "Barclays",
+        location: "Northampton",
+        date: "July 2020 – September 2020",
+        highlights: [
+          "Developed React frontend for merchant services selection app.",
+          "Shadowed API development with RAML; added Jest/Enzyme tests.",
+          "Gained agile methodology exposure and team structure understanding."
+        ]
+      }
+    ],
+    projects: [
+      {
+        name: "Growify",
+        description: "Masters dissertation project — An Android app to manage finances, investments, and automate budgeting.",
+        technologies: ["Java", "PostgreSQL", "Android Studio"],
+        duration: "Sept 2020 – Sept 2021"
+      }
+    ],
+    education: [
+      {
+        institution: "University of Birmingham",
+        degrees: [
+          {
+            title: "Masters in Advanced Computer Science",
+            duration: "Sept 2020 – Sept 2021",
+            notes: [
+              "Modules: Machine Learning, Data Structures, Robotics",
+              "Dissertation on Android Development (Java)",
+              "Achieved Distinction"
+            ]
+          },
+          {
+            title: "Bachelors in Chemical Engineering with Computer Science",
+            duration: "Sept 2016 – Sept 2020",
+            notes: [
+              "Modules: ML, Data Analysis, Petrochemical Engineering",
+              "Achieved 2:1"
+            ]
+          }
+        ]
+      },
+      {
+        institution: "Wyggeston & Queen Elizabeth College",
+        degrees: [
+          {
+            title: "A Levels",
+            duration: "2014 – 2016",
+            notes: [
+              "Maths – A*",
+              "Further Maths – A",
+              "Chemistry – A",
+              "Physics – A"
+            ]
+          }
+        ]
+      }
+    ],
+    interests: {
+      activities: ["Karate (Black Belt)", "MMA", "Muay Thai", "Scuba Diving (PADI Certified)"],
+      hobbies: ["Scuba Diving", "Badminton", "Chess", "Hackathons", "Puzzles"],
+      mobility: "Full UK driving license, willing to relocate or commute"
+    }
+  };
+  
+  export default data;
