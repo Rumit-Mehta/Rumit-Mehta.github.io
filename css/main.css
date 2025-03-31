@@ -24,6 +24,8 @@
  *  16. stats
  *  17. contact
  *  18. footer
+ *  19. Scroll Snap Container
+ *  20. Timeline Styles
  *
  * ===================================================================
  */
@@ -71,7 +73,7 @@ html, body {
 }
 body {
 	background: #151515;
-	font-family: "lora-regular", serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.7rem;
 	line-height: 3rem;
 	color: #6e6e6e;
@@ -155,7 +157,6 @@ p img {
 	margin: 0;
 }
 p.lead {
-	font-family: "lora-regular", serif;
 	line-height: 1.8;
 	color: #888888;
 	text-align: justify;
@@ -1028,12 +1029,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	color: #7d7d7d;
 }
 .section-intro {
-	max-width: 900px;
+	max-width: 1100px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 	margin-bottom: 3.6rem;
 	position: relative;
+	padding-top: 5rem;
 }
 .section-intro h1 {
 	font-family: "poppins-semibold", serif;
@@ -1102,7 +1104,7 @@ header .top-bar {
 	min-width: 220px;
 	min-height: 66px;
 	position: absolute;
-	left: 90px;
+	left: 0px;
 	top: 0;
 }
 header .logo {
@@ -1123,6 +1125,9 @@ header .logo a {
 	width: 100px;
 	height: 15px;
 	background-size: 100px 15px;
+}
+#header-row{
+	margin: 1rem;
 }
 
 /**
@@ -1270,22 +1275,22 @@ header .logo a {
  */
 @media only screen and (max-width:1024px) {
 	header .top-bar {
-		left: 60px;
+		left: 0px;
 	}
 }
 @media only screen and (max-width:768px) {
 	header .top-bar {
-		left: 50px;
+		left: 0px;
 	}
 }
 @media only screen and (max-width:600px) {
 	header .top-bar {
-		left: 35px;
+		left: 0px;
 	}
 }
 @media only screen and (max-width:400px) {
 	header .top-bar {
-		left: 25px;
+		left: 0px;
 	}
 }
 
@@ -1533,7 +1538,7 @@ header .logo a {
 .about-content {
 	position: relative;
 	text-align: left;
-	max-width: 850px;
+	max-width: 1100px;
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 }
@@ -1542,6 +1547,7 @@ header .logo a {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	letter-spacing: .25rem;
+	text-align: center;
 }
 .about-content .info-list {
 	list-style: none;
@@ -1572,6 +1578,7 @@ header .logo a {
 
 .button-section {
 	text-align: center;
+	max-width: 1100px;
 	/* display: flex; */
     justify-content: center;
     align-items: center;
@@ -1604,9 +1611,6 @@ header .logo a {
 	}
 	.intro-info .lead {
 		padding-left: 11rem;
-	}
-	.about-content h3 {
-		text-align: center;
 	}
 	.about-content .info-list, .about-content .skill-bars {
 		margin-bottom: 4.2rem;
@@ -1643,11 +1647,10 @@ header .logo a {
  * -------------------------------------------------------------------
  */
 #resume {
+	background-color: #FFFFFF;
 	height: 100vh;
 	width: 100%;
 	overflow-y: auto;
-	padding-top: 12rem;
-	padding-bottom: 12rem;
 }
 
 #resume .resume-header {
@@ -1658,12 +1661,14 @@ header .logo a {
 }
 
 #resume .resume-timeline {
-	max-width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
 }
 #resume .timeline-wrap {
 	position: relative;
-	margin-top: 1.5rem;
-	margin-bottom: 6rem;
+	margin-top: 4.2em;
+	margin-bottom: 1rem;
 }
 #resume .timeline-wrap::before {
 	content: "";
@@ -2509,7 +2514,7 @@ footer .copyright span:last-child::after {
 
 /**
  * ===================================================================
- * 19. scroll snap container
+ * 19. Scroll Snap Container
  * -------------------------------------------------------------------
  */
  .scroll-wrapper {
@@ -2522,3 +2527,161 @@ footer .copyright span:last-child::after {
   .scroll-wrapper section {
 	scroll-snap-align: start;
   }
+
+/* =======================================================
+   20. Timeline Styles
+   ======================================================= */
+
+   .timeline-centered {
+	position: relative;
+	margin-bottom: 30px;
+}
+.timeline-centered:before,
+.timeline-centered:after {
+	content: " ";
+	display: table;
+}
+.timeline-centered:after {
+	clear: both;
+}
+.timeline-centered:before,
+.timeline-centered:after {
+	content: " ";
+	display: table;
+}
+.timeline-centered:after {
+	clear: both;
+}
+.timeline-centered:before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 4px;
+	background: #EB5B00;
+	top: 20px;
+	bottom: 20px;
+	margin-left: 29px;
+}
+.timeline-centered .timeline-entry {
+	position: relative;
+	margin-top: 5px;
+	margin-left: 30px;
+	margin-bottom: 10px;
+	clear: both;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner {
+	position: relative;
+	margin-left: -20px;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background: black;
+	color: white;
+	border-radius: 50%;
+	text-align: center;
+	box-shadow: 0 0 0 5px #f2f3f7;
+	line-height: 40px;
+	float: left;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-none {
+	background: #fff;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
+	position: relative;
+	background: #EEEEEE;
+	color: black;
+	padding: 1.5em;
+	padding-bottom: 0.5em;
+	margin-left: 60px;
+	background-clip: padding-box;
+	border-radius: 10px;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 9px 9px 9px 0;
+	border-color: transparent;
+	left: 0;
+	top: 10px;
+	margin-left: -9px;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p + p {
+	margin-top: 0px;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 {
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	margin-bottom: 0px;
+	font-size: 20px;
+	font-weight: 500;
+
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label .timeline-sublabel {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	font-weight: 500;
+	margin: 0 0px 10px;
+	font-size: 12px;
+	font-style: italic;
+	vertical-align: top;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label .timeline-text {
+	display: block;
+	text-align: justify;
+	margin-bottom: 0px;
+	font-size: 13px;
+	color: #000;
+	opacity: 0.6;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label .timeline-text ul{
+	margin-bottom: 0%;
+}
+
+.timeline-text b {
+	font-family: inherit;
+	font-weight: bold;
+	font-size: inherit;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label div {
+	margin-top: 5px;
+}
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 span {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 100;
+}
+.timeline-tag{
+	display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    color: #EB5B00;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 10px;
+	border: 1px solid #EB5B00 ;
+}
+.timeline-tag:hover{
+	background-color: #EB5B00;
+	color: white;
+}
+.tag-row{
+	justify-content: space-between;
+}
