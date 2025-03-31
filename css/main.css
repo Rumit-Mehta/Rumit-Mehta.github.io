@@ -1102,7 +1102,7 @@ header .top-bar {
 	min-width: 220px;
 	min-height: 66px;
 	position: absolute;
-	left: 90px;
+	left: 0px;
 	top: 0;
 }
 header .logo {
@@ -1270,22 +1270,22 @@ header .logo a {
  */
 @media only screen and (max-width:1024px) {
 	header .top-bar {
-		left: 60px;
+		left: 0px;
 	}
 }
 @media only screen and (max-width:768px) {
 	header .top-bar {
-		left: 50px;
+		left: 0px;
 	}
 }
 @media only screen and (max-width:600px) {
 	header .top-bar {
-		left: 35px;
+		left: 0px;
 	}
 }
 @media only screen and (max-width:400px) {
 	header .top-bar {
-		left: 25px;
+		left: 0px;
 	}
 }
 
@@ -1533,7 +1533,7 @@ header .logo a {
 .about-content {
 	position: relative;
 	text-align: left;
-	max-width: 850px;
+	max-width: 900px;
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 }
@@ -1542,6 +1542,7 @@ header .logo a {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	letter-spacing: .25rem;
+	text-align: center;
 }
 .about-content .info-list {
 	list-style: none;
@@ -1572,6 +1573,7 @@ header .logo a {
 
 .button-section {
 	text-align: center;
+	max-width: 900px;
 	/* display: flex; */
     justify-content: center;
     align-items: center;
@@ -1604,9 +1606,6 @@ header .logo a {
 	}
 	.intro-info .lead {
 		padding-left: 11rem;
-	}
-	.about-content h3 {
-		text-align: center;
 	}
 	.about-content .info-list, .about-content .skill-bars {
 		margin-bottom: 4.2rem;
@@ -1658,7 +1657,8 @@ header .logo a {
 }
 
 #resume .resume-timeline {
-	max-width: 980px;
+	margin-left: auto;
+	margin-right: auto;
 }
 #resume .timeline-wrap {
 	position: relative;
