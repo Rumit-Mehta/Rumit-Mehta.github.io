@@ -73,7 +73,7 @@ html, body {
 }
 body {
 	background: #151515;
-	font-family: "lora-regular", serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1.7rem;
 	line-height: 3rem;
 	color: #6e6e6e;
@@ -157,7 +157,6 @@ p img {
 	margin: 0;
 }
 p.lead {
-	font-family: "lora-regular", serif;
 	line-height: 1.8;
 	color: #888888;
 	text-align: justify;
@@ -1030,7 +1029,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	color: #7d7d7d;
 }
 .section-intro {
-	max-width: 900px;
+	max-width: 1100px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -1126,6 +1125,9 @@ header .logo a {
 	width: 100px;
 	height: 15px;
 	background-size: 100px 15px;
+}
+#header-row{
+	margin: 1rem;
 }
 
 /**
@@ -1536,7 +1538,7 @@ header .logo a {
 .about-content {
 	position: relative;
 	text-align: left;
-	max-width: 900px;
+	max-width: 1100px;
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 }
@@ -1576,7 +1578,7 @@ header .logo a {
 
 .button-section {
 	text-align: center;
-	max-width: 900px;
+	max-width: 1100px;
 	/* display: flex; */
     justify-content: center;
     align-items: center;
@@ -1649,8 +1651,6 @@ header .logo a {
 	height: 100vh;
 	width: 100%;
 	overflow-y: auto;
-	padding-top: 12rem;
-	padding-bottom: 12rem;
 }
 
 #resume .resume-header {
@@ -1667,8 +1667,8 @@ header .logo a {
 }
 #resume .timeline-wrap {
 	position: relative;
-	margin-top: 1.5rem;
-	margin-bottom: 6rem;
+	margin-top: 4.2em;
+	margin-bottom: 1rem;
 }
 #resume .timeline-wrap::before {
 	content: "";
@@ -2597,6 +2597,7 @@ footer .copyright span:last-child::after {
 	background: #EEEEEE;
 	color: black;
 	padding: 1.5em;
+	padding-bottom: 0.5em;
 	margin-left: 60px;
 	background-clip: padding-box;
 	border-radius: 10px;
@@ -2618,29 +2619,69 @@ footer .copyright span:last-child::after {
 	margin-top: 0px;
 }
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 {
-	display: block;
+	display: flex;
+	justify-content: space-between;
 	text-align: left;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 	font-size: 20px;
 	font-weight: 500;
 
 }
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label .timeline-sublabel {
-	font-weight: 600;
-	margin: 0 0px 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	font-weight: 500;
+	margin: 0 0px 10px;
+	font-size: 12px;
+	font-style: italic;
+	vertical-align: top;
 }
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label .timeline-text {
+	display: block;
+	text-align: justify;
 	margin-bottom: 0px;
 	font-size: 13px;
 	color: #000;
+	opacity: 0.6;
 }
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label .timeline-text ul{
+	margin-bottom: 0%;
+}
+
+.timeline-text b {
+	font-family: inherit;
+	font-weight: bold;
+	font-size: inherit;
+}
+
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label div {
 	margin-top: 5px;
 }
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 span {
-	opacity: 0.4;
-	filter: alpha(opacity=40);
-	font-size: 16px;
-	text-align: right;
+	font-size: 12px;
 	font-style: italic;
+	font-weight: 100;
+}
+.timeline-tag{
+	display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    color: #EB5B00;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 10px;
+	border: 1px solid #EB5B00 ;
+}
+.timeline-tag:hover{
+	background-color: #EB5B00;
+	color: white;
+}
+.tag-row{
+	justify-content: space-between;
 }
