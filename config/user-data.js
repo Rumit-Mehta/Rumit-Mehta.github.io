@@ -37,7 +37,7 @@ const data = {
             company: "Barclays",
             icon:"fa-university",
             location: "Northampton",
-            date: "September 2022 – April 2024",
+            date: "July 2021 – April 2024",
             highlights: [
                 `
                 One of my core responsibilities was optimizing infrastructure costs without compromising on performance. 

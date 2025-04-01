@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 ${job.highlights.map(h => `<li>${h}</li>`).join("")}
                             </ul>
                         </span>  
-                        <div id = "tag-row">
+                        <div class = "tag-row">
                             ${job.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join(" ")}
                         </div>
                     </div>
