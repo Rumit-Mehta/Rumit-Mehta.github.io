@@ -1404,7 +1404,9 @@ header .logo a {
 .intro-social li a, .intro-social li a:visited {
 	color: #FFFFFF;
 }
-
+.intro-social li a i {
+	transition: color 0.5s ease;
+}
 .intro-social li a:hover .fa-linkedin { color: #0a66c2; }
 .intro-social li a:hover .fa-github { color:#EB5B00 }
 .intro-social li a:hover .fa-instagram { color: #E1306C; }
