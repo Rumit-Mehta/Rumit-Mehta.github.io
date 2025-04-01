@@ -1089,13 +1089,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  */
 header {
 	position: absolute;
-	width: 100%;
 	min-height: 66px;
 	z-index: 600;
 }
 header .row {
 	position: relative;
 	min-height: 66px;
+	width: fit-content;
 }
 header .top-bar {
 	position: relative;
@@ -1103,7 +1103,6 @@ header .top-bar {
 	background: transparent;
 	min-width: 220px;
 	min-height: 66px;
-	position: absolute;
 	left: 0px;
 	top: 0;
 }
@@ -1152,16 +1151,16 @@ header .logo a {
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
+	opacity: 0.35;
 	position: absolute;
 	right: 8px;
 	top: 50%;
 	bottom: auto;
 	left: auto;
-	-moz-transition: background 0.2s ease-in-out;
-	-o-transition: background 0.2s ease-in-out;
-	-webkit-transition: background 0.2s ease-in-out;
-	-ms-transition: background 0.2s ease-in-out;
 	transition: background 0.2s ease-in-out;
+}
+.menu-toggle:hover span{
+	opacity: 1;
 }
 .menu-toggle span::before, .menu-toggle span::after {
 	content: '';
@@ -1170,44 +1169,26 @@ header .logo a {
 	background-color: inherit;
 	position: absolute;
 	left: 0;
-	-moz-transition-duration: 0.2s, 0.2s;
-	-o-transition-duration: 0.2s, 0.2s;
-	-webkit-transition-duration: 0.2s, 0.2s;
-	-ms-transition-duration: 0.2s, 0.2s;
 	transition-duration: 0.2s, 0.2s;
-	-moz-transition-delay: 0.2s, 0s;
-	-o-transition-delay: 0.2s, 0s;
-	-webkit-transition-delay: 0.2s, 0s;
-	-ms-transition-delay: 0.2s, 0s;
 	transition-delay: 0.2s, 0s;
 }
 .menu-toggle span::before {
 	top: -8px;
-	-moz-transition-property: top, transform;
-	-o-transition-property: top, transform;
-	-webkit-transition-property: top, transform;
-	-ms-transition-property: top, transform;
 	transition-property: top, transform;
 }
 .menu-toggle span::after {
 	bottom: -8px;
-	-moz-transition-property: bottom, transform;
-	-o-transition-property: bottom, transform;
-	-webkit-transition-property: bottom, transform;
-	-ms-transition-property: bottom, transform;
+	opacity: 1;
 	transition-property: bottom, transform;
 }
 
 /* is clicked */
 .menu-toggle.is-clicked span {
 	background-color: rgba(255, 0, 119, 0);
+	opacity: 1;
 }
 .menu-toggle.is-clicked span::before, .menu-toggle.is-clicked span::after {
 	background-color: #EB5B00;
-	-moz-transition-delay: 0s, 0.2s;
-	-o-transition-delay: 0s, 0.2s;
-	-webkit-transition-delay: 0s, 0.2s;
-	-ms-transition-delay: 0s, 0.2s;
 	transition-delay: 0s, 0.2s;
 }
 .menu-toggle.is-clicked span::before {
