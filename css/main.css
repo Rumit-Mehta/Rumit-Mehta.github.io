@@ -1826,7 +1826,12 @@ header .logo a {
 	position: relative;
 	height: 100%;
 	display: flex;
-	align-items: stretch;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.portfolio-centered .col-six{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 .portfolio-centered:before,
 .portfolio-centered:after {
@@ -1852,6 +1857,8 @@ header .logo a {
 	position: relative;
 	clear: both;
 	height: 100%; /* make this the largest size possible for the row */
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 .portfolio-centered .portfolio-inner {
 	height: inherit;
@@ -2457,12 +2464,25 @@ header .logo a {
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.5rem;
 	text-align: center;
+	transition: 0.5s;
+}
+.contact-info .col-three{
+	padding: 2rem;
+}
+.contact-info a{
+	color: #6e6e6e;
+}
+.contact-info a:hover{
+	color: #EB5B00;
+}
+.contact-info p{
+	margin-bottom: 0;
 }
 .contact-info .collapse {
 	padding: 0;
 }
 .contact-info .icon {
-	margin-bottom: 2.1rem;
+	margin-bottom: 0.5rem;
 }
 .contact-info .icon i {
 	font-size: 4.2rem;
@@ -2470,7 +2490,9 @@ header .logo a {
 }
 .contact-info h5 {
 	color: #EB5B00;
+	margin-bottom: 0.5rem;
 }
+
 
 
 /**

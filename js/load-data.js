@@ -15,10 +15,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update contact info
     const phoneEl = document.getElementById("phone");
-    if (phoneEl) phoneEl.textContent = data.contact.phone;
+    if (phoneEl) {
+        phoneEl.textContent = data.contact.phone;
+        phoneEl.href = `tel:${data.contact.phone}`;
+    }
+
+    const whatsappEl = document.getElementById("whatsapp");
+    if (whatsappEl) {
+        const phone = data.contact.phone.replace(/\D/g, ''); // strip non-digits
+        whatsappEl.textContent = data.contact.phone;
+        whatsappEl.href = `https://wa.me/${phone}`;
+    }
 
     const emailEl = document.getElementById("email");
-    if (emailEl) emailEl.textContent = data.contact.email;
+    if (emailEl) {
+        emailEl.textContent = data.contact.email;
+        emailEl.href = `mailto:${data.contact.email}`;
+    }      
+
+    const locationEL = document.getElementById("location");
+    if (locationEL) locationEL.innerHTML = data.contact.location;
 
     const linkedinEl = document.getElementById("linkedin");
     if (linkedinEl) {
@@ -111,24 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             eduEl.innerHTML = `<h3>${edu.institution}</h3>${degreeHTML}`;
             eduContainer.appendChild(eduEl);
-        });
-    }
-
-    // Update projects
-    const projectContainer = document.getElementById("projects");
-    if (projectContainer && Array.isArray(data.projects)) {
-        data.projects.forEach(project => {
-            const projEl = document.createElement("div");
-            projEl.className = "project";
-
-            projEl.innerHTML = `
-                <h3>${project.name}</h3>
-                <p>${project.description}</p>
-                <p><strong>Technologies:</strong> ${project.technologies.join(", ")}</p>
-                <p><strong>Duration:</strong> ${project.duration}</p>
-            `;
-
-            projectContainer.appendChild(projEl);
         });
     }
 

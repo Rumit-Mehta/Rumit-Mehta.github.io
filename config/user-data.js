@@ -4,7 +4,8 @@ const data = {
     contact: {
         phone: "+447740090474",
         email: "rumitmehta@icloud.com",
-        linkedin: "https://www.linkedin.com/in/mehta-rumit/"
+        linkedin: "https://www.linkedin.com/in/mehta-rumit/",
+        location: "Leicester<br/>United Kingdom"
     },
     title: " Full-Stack Developer | DevOps Engineer ",
     summary:
@@ -83,7 +84,7 @@ const data = {
     projects: [
         {
             name: "Growify",
-            location:"University of Birmingham Masters Project",
+            location:"Android Investment Application",
             description: `
                 An Android application built to assist users in optimizing their financial health. 
                 Developed in Android-Studio via <b>Java and built using Gradle</b>, the app follows modern architectural patterns to ensure maintainability and scalability.
@@ -103,7 +104,30 @@ const data = {
                 <b>requests, pandas, and xlwt</b> for data processing and output generation. 
                 `,
             tags: ["Python", "RESTful API", "CSV", "Xlxs", "Pandas", "Numpy", "Excel"]
-        }
+        },
+        {
+            name: "Rumit-Mehta.github.io",
+            location:"My Personal Website",
+            description: `
+                Creating this website exposed me to <b>both technical implementation and self-expression.</b> Implementing <b>front-end 
+                technologies like HTML, CSS, and JavaScript</b>, and exploring modern frameworks made the development more efficient. Gained 
+                experience in <b>responsive design, SEO basics, and optimizing performance for different devices</b>. Beyond technicals, it pushed me to reflect 
+                on how to present my personal brand; what content to showcase and maintaing a balance between functionality 
+                and aesthetics. The process was extremely rewarding helping me grow as <b>a developer and communicator</b>.
+                `,
+            tags: ["JavaScript", "HTML", "CSS", "SEO"]
+        },
+        {
+            name: "Banking UI Overhaul",
+            location:"Barclays Merchant Services",
+            description: `
+                <b>Implemented a UI overhaul</b> for several key pages of the merchant services division <b>during my internship at the bank</b>. This project exposed me to a range of modern 
+                technologies, including <b>component-based frameworks, responsive design principles, and internal design systems</b>. Collaborating closely with both developers 
+                and UX designers, Gained hands-on experience in <b>translating business requirements into intuitive user interfaces</b>, enhancing both customer experience and operational efficiency. 
+                his project also gave me valuable exposure to the broader development process, including collaboration with Business Analysts and Product Owners.”
+                `,
+            tags: ["Python", "React", "JavaScript", "HTML", "CSS", "Jest"]
+        }     
     ],
     education: [
         {
