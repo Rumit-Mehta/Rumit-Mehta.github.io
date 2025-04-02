@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 ${job.highlights.map(h => `<li>${h}</li>`).join("")}
                             </ul>
                         </span>  
-                        <div id = "tag-row">
+                        <div class = "tag-row">
                             ${job.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join(" ")}
                         </div>
                     </div>
@@ -59,6 +59,35 @@ document.addEventListener("DOMContentLoaded", () => {
             workContainer.appendChild(jobEl);
         });
     }
+
+    // Update portfolio 
+    const portfolioContainer = document.getElementById("portfolio-dynamic");
+    if (portfolioContainer && Array.isArray(data.projects)) {
+        data.projects.forEach(project => {
+
+            const wrapperDiv = document.createElement("div");
+            wrapperDiv.className = "col-six tab-full";
+            const portfolioEL = document.createElement("article");
+            portfolioEL.className = "portfolio-entry";
+
+            portfolioEL.innerHTML = `
+            <div class="portfolio-inner coloured">
+                <div class="portfolio-label" id="portfolio-label">
+                    <h2>${project.name}</h2>
+                    <span class="portfolio-sublabel">${project.location}</span>
+                    <p class="portfolio-text">${project.description}</p>
+                    <div class = "tag-row">
+                    ${project.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join(" ")}
+                    </div>
+                </div>
+            </div>
+            `;
+ 
+            wrapperDiv.appendChild(portfolioEL);
+            portfolioContainer.appendChild(wrapperDiv);
+        });
+     }
+
 
     // Update education
     const eduContainer = document.getElementById("education");
