@@ -140,5 +140,4 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }
     
-    // You can continue this pattern for other data like experience, education, etc.
 });
