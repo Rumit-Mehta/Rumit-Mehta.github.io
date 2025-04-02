@@ -30,7 +30,7 @@ const data = {
             and acting as the primary point of contact across the organization.
             `
             ],
-            tags: ["Python","Javascript","Django","ResfulAPIs","MySQL", "Azure"]
+            tags: ["Python","Django","Javascript","ResfulAPIs","MySQL", "Azure"]
         },
         {
             title: "Platform Engineer | Site Reliability Engineer",
@@ -83,9 +83,26 @@ const data = {
     projects: [
         {
             name: "Growify",
-            description: "Masters dissertation project — An Android app to manage finances, investments, and automate budgeting.",
-            technologies: ["Java", "PostgreSQL", "Android Studio"],
-            duration: "Sept 2020 – Sept 2021"
+            location:"University of Birmingham Masters Project",
+            description: `
+                An Android application built to assist users in optimizing their financial health. 
+                Developed in Android-Studio via <b>Java and built using Gradle</b>, the app follows modern architectural patterns to ensure maintainability and scalability.
+                It <b>utilizes Room, ViewModel with LiveData and lifecycle-aware components.</b> The debt prioritization logic is driven by a combination of interest rate 
+                optimization with user-defined goals. Investment suggestions are generated using <b>algorithms that accounts for risk appetite, 
+                emergency fund status, and debt-to-income ratio.</b> 
+                `,
+            tags: ["Java", "PostgreSQL", "Android Studio", "XML", "Algorithms"]
+        },
+        {
+            name: "Multi Bank Analyser",
+            location:"Personal Finance Automation Tool",
+            description: `
+                A <b>Python-based</b> personal finance tool that <b>integrates with APIs from multiple banks</b> to fetch transaction data, automatically categorize spending, 
+                and export insights into a structured Excel (.xls) file. Built <b>custom logic to identify trends in income, expenses, and recurring payments.</b> 
+                The exported data feeds into dynamic spreadsheets for visualizing trends over time, enabling smarter financial decisions. Used technologies such as 
+                <b>requests, pandas, and xlwt</b> for data processing and output generation. 
+                `,
+            tags: ["Python", "RESTful API", "CSV", "Xlxs", "Pandas", "Numpy", "Excel"]
         }
     ],
     education: [
