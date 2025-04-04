@@ -288,4 +288,28 @@
 
 	});		
 
+	document.addEventListener("DOMContentLoaded", function () {
+		const icons = document.querySelectorAll("#edu-icon-row .icon-overlay");
+		let lastHovered = document.querySelector(".icon-overlay.icon-4"); // initial highlight
+	
+		function removeHighlights() {
+		icons.forEach(icon => icon.classList.remove("highlight"));
+		}
+	
+		icons.forEach(icon => {
+		icon.addEventListener("mouseenter", () => {
+			removeHighlights();
+			icon.classList.add("highlight");
+			lastHovered = icon;
+		});
+	
+		icon.addEventListener("mouseleave", () => {
+			// On leave, we reset the highlight to the last hovered one
+			removeHighlights();
+			lastHovered.classList.add("highlight");
+		});
+		});
+	});
+
 })(jQuery);
+
