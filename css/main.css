@@ -19,6 +19,7 @@
  *  11. about
  *  12. resume
  *  13. portfolio
+ *	13b. Education
  *  14. call-to-action section
  *  15. services
  *  16. stats
@@ -2036,6 +2037,68 @@ header .logo a {
 	}
 }
 
+
+/* 
+ *	13b. Education
+ * ------------------------------------------------------------------
+ */
+
+#edu {
+	background-color: #FFFFFF;
+	height: 100vh;
+	width: 100%;
+	overflow-y: auto;
+}
+.edu-centered {
+	display: flex;
+	position: relative;
+	width: 100%;
+	max-width: 1100px;
+	height: 100px;
+}
+#edu-timeline{
+	display: block;
+	margin: 0 auto;
+}
+.row.edu-content{
+	display: flex;
+	align-items: center;
+	max-width: 1100px;
+	margin-top: 8rem;
+}
+#edu-icon-row{
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: inherit;
+}
+.icon-overlay{
+	position: absolute;
+	font-size: 2rem;
+	color: white;
+	background-color: black;
+	box-shadow: 0 0 0 5px #f2f3f7;
+	transform: translate(-50%, -50%);
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.6;
+	transition: 0.5s;
+}
+.icon-overlay:hover{
+	opacity: 1;
+}
+/* These are percentage-based for responsiveness */
+.icon-1 { left: 12.5%; top: -5%; }   /* ~125/1000 */
+.icon-2 { left: 37.5%; top: 105%; }   /* ~375/1000 */
+.icon-3 { left: 62.5%; top: -5%; }   /* ~625/1000 */
+.icon-4 { left: 87.5%; top: 105%; }   /* ~875/1000 */
+
+
 /**
  * transition effect for modal popup - (_layout.scss)
  * ------------------------------------------------------------------
@@ -2842,3 +2905,58 @@ footer .copyright span:last-child::after {
 	gap: 0.5rem;
 	flex-wrap: wrap;
 }
+
+/* ===================================================================
+ * 21. Timeline Horizontal
+ * -------------------------------------------------------------------
+ */
+.timeline-horizontal {
+	display: flex;
+	overflow-x: auto;
+	padding: 2rem 0;
+	position: relative;
+  }
+  
+  .timeline-horizontal::before {
+	content: none;
+  }
+  
+  .timeline-horizontal .timeline-entry {
+	position: relative;
+	flex: 0 0 auto;
+	width: 250px;
+	margin: 0 2rem;
+	text-align: center;
+  }
+  
+  .timeline-horizontal .timeline-entry-inner {
+	position: relative;
+	z-index: 2;
+  }
+  
+  .timeline-horizontal .timeline-label {
+	background: #EEEEEE;
+	border-radius: 10px;
+	padding: 1rem;
+	margin-bottom: 2rem;
+	display: inline-block;
+	position: relative;
+  }
+  
+  .timeline-horizontal .timeline-entry:nth-child(even) .timeline-label {
+	margin-top: 4rem;
+	margin-bottom: 0;
+  }
+  
+  .timeline-horizontal .timeline-icon {
+	background: black;
+	color: white;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 50%;
+	margin: 1rem auto;
+	z-index: 2;
+	position: relative;
+  }
+  
