@@ -106,8 +106,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Update education
-    const eduContainer = document.getElementById("education");
-    if (eduContainer && Array.isArray(data.education)) {
+    const eduLabel = document.querySelector(".edu-label");
+    const updateEduLabel = (edu) => {
+        if (!eduLabel) return;
+        eduLabel.innerHTML = `
+            <h2>${edu.qualification} <span>${edu.duration}</span></h2>
+            <span class="edu-sublabel">
+                <span style="flex: 1">${edu.institution}</span>
+            </span> 
+            <span class="edu-text">
+                <ul>
+                    ${edu.notes}
+                </ul>
+            </span>  
+        `;
+    };
+    
+    const eduIcons = document.querySelectorAll("#edu-icon-row .icon-overlay");
+
+    if (Array.isArray(data.education)) {
+        eduIcons.forEach((icon, index) => {
+            icon.addEventListener("mouseenter", () => {
+                updateEduLabel(data.education[index]);
+            });
+
+            icon.addEventListener("mouseleave", () => {
+                // optionally keep the last hovered label visible or do nothing
+            });
+        });
+
+        // Initially set the label to the last education entry (e.g., the graduation cap)
+        updateEduLabel(data.education[data.education.length - 1]);
+
         data.education.forEach(edu => {
             const eduEl = document.createElement("div");
             eduEl.className = "education-block";
@@ -126,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             eduEl.innerHTML = `<h3>${edu.institution}</h3>${degreeHTML}`;
-            eduContainer.appendChild(eduEl);
+            eduLabel.appendChild(eduEl);
         });
     }
 

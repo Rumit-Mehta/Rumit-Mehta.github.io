@@ -131,41 +131,122 @@ const data = {
     ],
     education: [
         {
-            institution: "University of Birmingham",
-            degrees: [
-            {
-                title: "Masters in Advanced Computer Science",
-                duration: "Sept 2020 – Sept 2021",
-                notes: [
-                "Modules: Machine Learning, Data Structures, Robotics",
-                "Dissertation on Android Development (Java)",
-                "Achieved Distinction"
-                ]
-            },
-            {
-                title: "Bachelors in Chemical Engineering with Computer Science",
-                duration: "Sept 2016 – Sept 2020",
-                notes: [
-                "Modules: ML, Data Analysis, Petrochemical Engineering",
-                "Achieved 2:1"
-                ]
-            }
-            ]
+            qualification: "GCSE's",
+            institution: "Lutterworth College",
+            duration: "Sept 2012 – July 2014",
+            notes: `
+                    <ul class="stats-tabs">
+                        <li>
+                            <a href="#">
+                            3 A*
+                            <em>Triple Science</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            2 A*
+                            <em>Engineering</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            A*
+                            <em>Religious Education</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            A*
+                            <em>Maths</em>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="stats-tabs">
+                        <li>
+                            <a href="#">
+                            A
+                            <em>English Literature</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            A
+                            <em>Gujarati</em>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="stats-tabs">
+                        <li>
+                            <a href="#">
+                            B
+                            <em>English Language</em>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            B
+                            <em>Geography</em>
+                            </a>
+                        </li>
+                    </ul>
+                    `   
         },
         {
+            qualification: "A Levels",
             institution: "Wyggeston & Queen Elizabeth College",
-            degrees:
-            {
-                title: "A Levels",
-                duration: "2014 – 2016",
-                notes: [
-                    "Maths – A*",
-                    "Further Maths – A",
-                    "Chemistry – A",
-                    "Physics – A"
-                ]
-            }
-        }
+            duration: "Sept 2014 – July 2016",
+            notes: `
+                <ul class="stats-tabs">
+                    <li>
+                        <a href="#">
+                        A*
+                        <em>Maths</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        A
+                        <em>Further Maths</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        A
+                        <em>Physics</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        A
+                        <em>Chemistry</em>
+                        </a>
+                    </li>
+                </ul>
+                `
+            
+        },
+        {
+            qualification: "Bachelors in Chemical Engineering with Computer Science",
+            institution: "University of Birmingham",
+            duration: "Sept 2016 – July 2020",
+            notes: `
+                Modules: ML, Data Analysis, Petrochemical Engineering, Achieved 2:1
+                `
+            
+        },
+        {
+            qualification: "Masters in Advanced Computer Science",
+            institution: "University of Birmingham",
+            duration: "Sept 2020 – Sept 2021",
+            notes: `
+                Modules: Machine Learning, Data Structures, Robotics,
+                Dissertation on Android Development (Java)
+                Achieved Distinction
+                `
+
+        },
+
+
     ],
     interests: {
         activities: ["Karate (Black Belt)", "MMA", "Muay Thai", "Scuba Diving (PADI Certified)"],

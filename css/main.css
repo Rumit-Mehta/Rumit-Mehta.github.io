@@ -908,7 +908,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  */
 .stats-tabs {
 	padding: 0;
-	margin: 3rem 0;
+	margin:  0;
 }
 .stats-tabs li {
 	display: inline-block;
@@ -2061,10 +2061,47 @@ header .logo a {
 	margin: 0 auto;
 }
 .row.edu-content{
-	display: flex;
-	align-items: center;
 	max-width: 1100px;
 	margin-top: 8rem;
+}
+.edu-content .col-twelve{
+	margin-top: 5rem;
+}
+.edu-label{
+	margin: 5rem;
+	position: relative;
+	background: #EEEEEE;
+	color: black;
+	padding: 1.5em;
+	background-clip: padding-box;
+	border-radius: 10px;
+}
+.edu-label h2{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0px;
+}
+.edu-label h2 span{
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 100;
+}
+.edu-sublabel{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: left;
+	font-weight: 500;
+	margin: 0 0px 30px;
+	font-size: 12px;
+	font-style: italic;
+	vertical-align: top;
+}
+.edu-text ul{
+	margin: 0;
+}
+.edu-text ul li{
+	margin-bottom: 1.5rem;
 }
 #edu-icon-row{
 	position: absolute;
@@ -2086,8 +2123,12 @@ header .logo a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	opacity: 0.6;
-	transition: 0.5s;
+	opacity: 0.4;
+	transition: 0.5s ease;
+}
+.icon-overlay.highlight{
+	opacity: 1;
+	box-shadow: 0 0 0 5px #EB5B00;
 }
 .icon-overlay:hover{
 	opacity: 1;
