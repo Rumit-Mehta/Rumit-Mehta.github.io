@@ -28,9 +28,6 @@
 	<script src="js/modernizr.js"></script>
 	<script src="js/pace.min.js"></script>
 
-   <!-- favicons
-	================================================== -->
-	<link rel="icon" type="image/png" href="favicon.png">
 
 </head>
 
@@ -71,7 +68,7 @@
 				<div class="col-twelve">
 
 					<h5>Hello, World.</h5>
-					<h1>I'm <span id="name">{name}</span></h1>
+					<h1>I'm <span id="name">Rumit Mehta</span></h1>
 
 					<p class="intro-position">
 						<span>Frontend-Developer</span><span>Backend-Developer</span><span>Devops-Engineer</span>
@@ -225,7 +222,7 @@
 
 		<div class="row button-section">
 			<div class="">
-				<a href="#resume" title="continue" class="button stroke smoothscroll">Projects</a>
+				<a href=#portfolio title="continue" class="button stroke smoothscroll">Projects</a>
 			</div>
 		</div>
 
@@ -244,6 +241,39 @@
 				<div class="portfolio-centered" id ="portfolio-dynamic"></div>
 			</div>
 		</section>
+
+	<!-- Education Section 
+	================================================== -->
+		<section id="edu">
+			<div id="edu-start" class="row section-intro">
+				<div class="col-twelve">
+					<h5>Education</h5>
+				</div>
+			</div>
+			<div class="row edu-content">
+				<div class="edu-centered">
+					<svg id="edu-timeline" width="100%" viewBox="0 0 1000 100" preserveAspectRatio="none">
+						<defs>
+							<linearGradient id="edu-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+							  <stop offset="0%" style="stop-color:white; stop-opacity:1" />
+							  <stop offset="100%" style="stop-color:#EB5B00; stop-opacity:1" />
+							</linearGradient>
+						  </defs>
+						  
+						  <path d="M0,50 Q125,0 250,50 T500,50 T750,50 T1000,50" stroke="url(#edu-gradient)" fill="transparent" stroke-width="4"/>
+					</svg>
+					<div id="edu-icon-row">
+						<span class="icon-overlay icon-1"><i class="fa fa-pencil"></i></span>
+						<span class="icon-overlay icon-2"><i class="fa fa-laptop"></i></span>
+						<span class="icon-overlay icon-3"><i class="fa fa-university"></i></span>
+						<span class="icon-overlay highlight icon-4"><i class="fa fa-graduation-cap"></i></span>
+					</div>
+				</div> 
+				<div class="col-twelve"> 
+					<div class="edu-label"></div> <!-- dynamically add education -->
+				</div>				
+			</div>
+		</section> <!-- /education -->
 
 
 		<!-- services Section
@@ -360,7 +390,7 @@
 
 		<div class="row contact-info">
 			<!-- location -->
-			<div class="col-three tab-full">
+			<div class="col-four tab-full">
 
 				<div class="icon">
 					<i class="fa fa-map-marker"></i>
@@ -371,7 +401,7 @@
 
 			</div>
 
-			<div class="col-three tab-full">
+			<div class="col-four tab-full">
 
 				<div class="icon">
 					<i class="fa fa-envelope"></i>
@@ -382,7 +412,7 @@
 
 			</div>
 
-			<div class="col-three tab-full">
+			<div class="col-four tab-full">
 
 				<div class="icon">
 					<i class="fa fa-phone"></i>
@@ -392,19 +422,19 @@
 				<a id="whatsapp"></a>
 
 			</div>
-
-			<div class="col-three tab-full">
+			
+			<!-- TODO: Connect it to both my calendar and their calendar -->
+			<!-- <div class="col-three tab-full">
 
 				<div class="icon">
 					<i class="fa fa-calendar"></i>
 				</div>
-				<!-- TODO: Connect it to both my calendar and their calendar -->
 				<h5>Calendar</h5>
 				<a id="calendar" href=""_blank">
 					Add to my Calendar
 				</a>
 				
-			</div>
+			</div> -->
 
 		</div> <!-- /contact-info -->
 
@@ -414,7 +444,7 @@
    <!-- footer
    ================================================== -->
 
-   <!-- <footer>
+   <footer>
      	<div class="row">
         <div class="col-six tab-full pull-right social">
 
@@ -427,7 +457,7 @@
 
    <div id="preloader">
     	<div id="loader"></div>
-   </div> -->
+   </div>
 
    <!-- Java Script
    ================================================== -->
