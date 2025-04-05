@@ -1140,8 +1140,10 @@ header .logo a {
 	height: 40px;
 	margin-left: 20px;
 	margin-top: 13px;
+	padding-top: 10px;
 	display: block;
 	position: relative;
+	transition: 0.5s ease;
 }
 .menu-toggle span {
 	display: block;
@@ -1158,7 +1160,7 @@ header .logo a {
 	top: 50%;
 	bottom: auto;
 	left: auto;
-	transition: background 0.2s ease-in-out;
+	transition: 0.3s ease-in-out;
 }
 .menu-toggle:hover span{
 	opacity: 1;
@@ -2406,8 +2408,8 @@ header .logo a {
  */
 #contact {
 	background: #151515;
-	padding-top: 12rem;
-	padding-bottom: 7.2rem;
+	padding-top: 7rem;
+	padding-bottom: 7rem;
 }
 #contact .section-intro h1 {
 	color: white;
@@ -2662,7 +2664,7 @@ header .logo a {
  * -------------------------------------------------------------------
  */
 footer {
-	padding-bottom: 3rem;
+	position: absolute;
 	font-size: 1.4rem;
 	font-family: "poppins-regular", sans-serif;
 }
